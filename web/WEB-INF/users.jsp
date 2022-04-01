@@ -27,11 +27,7 @@
                         <th>${user.email}</th>
                         <th>${user.firstName}</th>
                         <th>${user.lastName}</th>
-                        <c:forEach items ="${roles}" var="role">
-                            <c:if test="${user.role == role.roleId}">
-                                <th>${role.roleName}</th>
-                            </c:if>
-                        </c:forEach>
+                        <th>${user.role.roleName}</th>
                         <th><a href="user?action=edit&email=${user.email}&firstname=${user.firstName}&lastname=${user.lastName}
                                &password=${user.password}&active=${user.active}">Edit</a></th>
                         <th><a href="user?action=delete&email=${user.email}">Delete</a></th>
